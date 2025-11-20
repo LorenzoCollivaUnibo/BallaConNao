@@ -92,7 +92,6 @@ def main(robot_ip, port):
         #first move is StandInit as required
         
         initial_standing = postcondition_standing(starting_pos[0])
-
         #No mandatory positions with preconditions standing = False
         goal_standing = True
 
@@ -164,6 +163,7 @@ def main(robot_ip, port):
     do_moves(solution, robot_ip, port)
     end = time.time()
     print("Length of the entire choreography: %.2f seconds." % (end-start))
+
 
 def postcondition_standing(position):
     if position in ('16-Sit', '17-SitRelax'):
